@@ -1,0 +1,44 @@
+:root {
+  --color: #9466ff;
+}
+.header {
+  width: 100%;
+  height: 4.5rem;
+  background-color: var(--color);
+}
+body.active .header {
+  background-color: #111014;
+  box-shadow: -1px 1px 10px 1px rgb(9, 9, 10);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  color: white;
+}
+.dark {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  cursor: pointer;
+}
+body.active .dark {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+body.active .sun {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  cursor: pointer;
+}
+.sun {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
