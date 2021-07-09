@@ -6,7 +6,7 @@ import './Home.css'
 
 function Home() {
   const [usuario, setUsuario] = useState('')
-  const [avatar, setAvatar] = useState({})
+  const [usuarioGit, setUsuarioGit] = useState({})
   const [error, setError] = useState(false)
 
   function getUser() {
@@ -15,7 +15,7 @@ function Home() {
       .then(response => {
         if (usuario !== undefined) {
           const profile = response.data
-          setAvatar(profile)
+          setUsuarioGit(profile)
           document.querySelector('.container_perfil').classList.add('active')
           setError(false)
         } else {
@@ -41,7 +41,7 @@ function Home() {
           <button onClick={getUser}>Buscar</button>
         </div>
         {error ? <p className="error">Usuário não encontrado.</p> : ''}
-        <Status user={avatar} />
+        <Status user={usuarioGit} />
       </section>
     </>
   )
